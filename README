@@ -1,7 +1,7 @@
-Scopic is an images manipulation library for PHP released under the LGPLv3 license. It is fully oriented-object and focuses on performances and ease of use.
+Scopic is an images manipulation library for PHP 5.3 released under the LGPLv3 license. It is fully oriented-object and focuses on performances and ease of use.
 
 LICENCE and CREDITS
 -------------------------------
 You can find a copy of licence in LICENCE file.
-Feel free to contact me at yvan@scopicproject.org. Help and all feedbacks are welcome.
+Feel free to contact me at yvan@scopicproject.org.
 (c) Copyrights 2011, Yvan Michel

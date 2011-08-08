@@ -16,23 +16,32 @@
  * along with Scopic. If not, see <http://www.gnu.org/licenses/>.
  */
 
+namespace ScopicTest;
+
 /**
- * @category Scopic UnitTest
- * @package  Scopic
+ * @package  ScopicTest
  * @author   Yvan Michel <yvan@scopicproject.org>
  * @link     http://www.scopicproject.org
  */
-class ScopicTest extends PHPUnit_Framework_TestCase
+class AutoloadTest extends \PHPUnit_Framework_TestCase
 {
-    private $_scopic = null;
-
-    public function setUp()
+    public function testValidScopicClass()
     {
-        $this->_scopic = Scopic::getInstance();
+        // @todo $this->assertTrue(class_exists('Scopic\Image'));
     }
 
-    public function testSingleton()
+    public function testInvalidScopicClass()
     {
-        $this->assertEquals($this->_scopic, Scopic::getInstance());
+        $this->assertFalse(class_exists('Scopic\Testouille'));
+    }
+
+    public function testValidCoreClass()
+    {
+        $this->assertTrue(class_exists('\Exception'));
+    }
+
+    public function testInvalidCoreClass()
+    {
+        $this->assertFalse(class_exists('\Testouille'));
     }
 }

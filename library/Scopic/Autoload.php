@@ -16,18 +16,19 @@
  * along with Scopic. If not, see <http://www.gnu.org/licenses/>.
  */
 
+namespace Scopic;
+
 /**
  * Autoload handler
  *
- * @category Scopic
- * @package  Scopic_Autoload
+ * @package  Scopic
  * @author   Yvan Michel <yvan@scopicproject.org>
  * @link     http://www.scopicproject.org
  */
-class Scopic_Autoload
+class Autoload
 {
     /**
-     * Stores Scopic autoload handler into PHP autoload stack
+     * Stores Scopic autoload handler into the PHP autoload stack
      */
     public static function register()
     {
@@ -37,14 +38,14 @@ class Scopic_Autoload
     }
 
     /**
-     * Scopic autoload handler
+     * Determines the class file location
      *
-     * @param string $className Class to load
+     * @param string $className
      */
     public static function autoload($className)
     {
         if (strpos($className, 'Scopic') == 0) {
-            $classFile = realpath(dirname(__FILE__) . '/../') . '/' .str_replace('_', '/', $className) . '.php';
+            $classFile = realpath(dirname(__FILE__) . '/../') . DIRECTORY_SEPARATOR . str_replace('\\', DIRECTORY_SEPARATOR, $className) . '.php';
 
             if (file_exists($classFile)) {
                 require_once $classFile;
@@ -53,4 +54,4 @@ class Scopic_Autoload
     }
 }
 
-Scopic_Autoload::register();
+Autoload::register();

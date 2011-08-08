@@ -1,5 +1,5 @@
 <phpunit bootstrap="bootstrap.php">
     <testsuite name="Scopic Test Suite">
-        <directory>./library</directory>
+        <directory>library</directory>
     </testsuite>
 </phpunit>
