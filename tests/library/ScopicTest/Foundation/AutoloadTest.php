@@ -25,23 +25,19 @@ namespace ScopicTest\Foundation;
  */
 class AutoloadTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * Tests a valid Scopic class
+     */
     public function testValidScopicClass()
     {
-        // @todo $this->assertTrue(class_exists('Scopic\Image'));
+        $this->assertTrue(class_exists('Scopic\Foundation\Math'));
     }
 
+    /**
+     * Tests an invalid Scopic class
+     */
     public function testInvalidScopicClass()
     {
         $this->assertFalse(class_exists('Scopic\Testouille'));
-    }
-
-    public function testValidCoreClass()
-    {
-        $this->assertTrue(class_exists('\Exception'));
-    }
-
-    public function testInvalidCoreClass()
-    {
-        $this->assertFalse(class_exists('\Testouille'));
     }
 }
