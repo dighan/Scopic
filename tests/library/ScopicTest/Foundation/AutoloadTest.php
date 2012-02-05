@@ -16,10 +16,10 @@
  * along with Scopic. If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace ScopicTest;
+namespace ScopicTest\Foundation;
 
 /**
- * @package  ScopicTest
+ * @package  ScopicTest\Foundation
  * @author   Yvan Michel <yvan@scopicproject.org>
  * @link     http://www.scopicproject.org
  */

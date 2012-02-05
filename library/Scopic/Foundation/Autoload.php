@@ -16,12 +16,12 @@
  * along with Scopic. If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Scopic;
+namespace Scopic\Foundation;
 
 /**
  * Autoload handler
  *
- * @package  Scopic
+ * @package  Scopic\Foundation
  * @author   Yvan Michel <yvan@scopicproject.org>
  * @link     http://www.scopicproject.org
  */
@@ -45,7 +45,7 @@ class Autoload
     public static function autoload($className)
     {
         if (strpos($className, 'Scopic') == 0) {
-            $classFile = realpath(dirname(__FILE__) . '/../') . DIRECTORY_SEPARATOR . str_replace('\\', DIRECTORY_SEPARATOR, $className) . '.php';
+            $classFile = realpath(dirname(__FILE__) . '/../../') . DIRECTORY_SEPARATOR . str_replace('\\', DIRECTORY_SEPARATOR, $className) . '.php';
 
             if (file_exists($classFile)) {
                 require_once $classFile;
