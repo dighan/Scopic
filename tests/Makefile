@@ -1,6 +1,6 @@
 # Runs suite tests
 all:
-	phpunit
+	phpunit --colors
 
 # Generates code coverage report
 report:
