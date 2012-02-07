@@ -34,7 +34,7 @@ class Point
     /**
      * Keypoints
      *
-     * @var integer
+     * @var uint
      */
     const TOP_LEFT = 1;
     const TOP_CENTER = 2;
@@ -49,14 +49,14 @@ class Point
     /**
      * X coordinate
      *
-     * @var integer
+     * @var uint
      */
     private $_x = 0;
 
     /**
      * Y coordinate
      *
-     * @var integer
+     * @var uint
      */
     private $_y = 0;
 
@@ -65,7 +65,7 @@ class Point
      *
      * @param  uint $x X coordinate
      * @param  uint $y Y coordinate
-     * @throws \InvalidArgumentException Coordinates are not unsigned integer
+     * @throws \InvalidArgumentException Coordinates are not unsigned integers
      */
     public function __construct($x, $y)
     {
@@ -79,18 +79,6 @@ class Point
 
         $this->_x = Math::uint($x);
         $this->_y = Math::uint($y);
-    }
-
-    /**
-     * Moves current coordinates
-     *
-     * @param uint $newX New X coordinate
-     * @param uint $newY New Y coordinate
-     */
-    public function move($newX, $newY)
-    {
-        $this->_x = Math::uint($newX);
-        $this->_y = Math::uint($newY);
     }
 
     /**
@@ -127,10 +115,10 @@ class Point
     }
 
     /**
-     * Checks that a keypoint exists
+     * Checks whether a keypoint exists
      *
-     * @param  integer $keypoint A keypoint
-     * @return integer
+     * @param  uint $keypoint A keypoint
+     * @return uint
      * @throws \InvalidArgumentException Keypoint does not exist
      */
     public static function check($keypoint)
@@ -143,9 +131,9 @@ class Point
     }
 
     /**
-     * Tests that a keypoint exists
+     * Tests whether a keypoint exists
      *
-     * @param  integer $keypoint A keypoint
+     * @param  uint  $keypoint A keypoint
      * @return boolean
      */
     public static function exists($keypoint)
