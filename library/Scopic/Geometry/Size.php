@@ -18,7 +18,7 @@
 
 namespace Scopic\Geometry;
 
-use Scopic\Foundation\Math;
+use Scopic\Foundation\Number;
 
 /**
  * Size representation
@@ -52,16 +52,16 @@ class Size
      */
     public function __construct($width, $height)
     {
-        if (!Math::isUint($width)) {
+        if (!Number::isUint($width)) {
             throw new \InvalidArgumentException('Invalid width "' . $width . '" (unsigned integer expected)');
         }
 
-        if (!Math::isUint($height)) {
+        if (!Number::isUint($height)) {
             throw new \InvalidArgumentException('Invalid height "' . $height . '" (unsigned integer expected)');
         }
 
-        $this->_width = Math::uint($width);
-        $this->_height = Math::uint($height);
+        $this->_width = Number::toUint($width);
+        $this->_height = Number::toUint($height);
     }
 
     /**

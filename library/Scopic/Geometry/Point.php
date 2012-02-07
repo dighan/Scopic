@@ -18,7 +18,7 @@
 
 namespace Scopic\Geometry;
 
-use Scopic\Foundation\Math;
+use Scopic\Foundation\Number;
 
 /**
  * Point representation
@@ -69,16 +69,16 @@ class Point
      */
     public function __construct($x, $y)
     {
-        if (!Math::isUint($x)) {
+        if (!Number::isUint($x)) {
             throw new \InvalidArgumentException('Invalid X coordinate "' . $x . '" (unsigned integer expected)');
         }
 
-        if (!Math::isUint($y)) {
+        if (!Number::isUint($y)) {
             throw new \InvalidArgumentException('Invalid Y coordinate "' . $y . '" (unsigned integer expected)');
         }
 
-        $this->_x = Math::uint($x);
-        $this->_y = Math::uint($y);
+        $this->_x = Number::toUint($x);
+        $this->_y = Number::toUint($y);
     }
 
     /**

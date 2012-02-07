@@ -30,7 +30,7 @@ class AutoloadTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidScopicClass()
     {
-        $this->assertTrue(class_exists('Scopic\Foundation\Math'));
+        $this->assertTrue(class_exists('Scopic\Foundation\Number'));
     }
 
     /**

@@ -19,19 +19,19 @@
 namespace Scopic\Foundation;
 
 /**
- * Math utilities
+ * Number utility
  *
  * @package  Scopic\Foundation
  * @author   Yvan Michel <yvan@scopicproject.org>
  * @link     http://www.scopicproject.org
  */
-class Math
+class Number
 {
     /**
-     * Tests that a number is an integer
+     * Tests whether a number is an integer
      *
-     * @param  mixed   $number
-     * @return boolean
+     * @param  mixed $number
+     * @return bool
      */
     public static function isInt($number)
     {
@@ -39,10 +39,10 @@ class Math
     }
 
     /**
-     * Tests that a number is a float
+     * Tests whether a number is a float
      *
-     * @param  mixed   $number
-     * @return boolean
+     * @param  mixed $number
+     * @return bool
      */
     public static function isFloat($number)
     {
@@ -50,10 +50,10 @@ class Math
     }
 
     /**
-     * Tests that a number is an unsigned integer (positive number)
+     * Tests whether a number is an unsigned integer
      *
-     * @param  mixed   $number
-     * @return boolean
+     * @param  mixed $number
+     * @return bool
      */
     public static function isUint($number)
     {
@@ -61,34 +61,34 @@ class Math
     }
 
     /**
-     * Returns an integer number
+     * Converts a number to an integer
      *
-     * @param  mixed   $number
-     * @return integer
+     * @param  mixed $number
+     * @return int
      */
-    public static function int($number)
+    public static function toInt($number)
     {
         return (int) $number;
     }
 
     /**
-     * Returns a float number
+     * Converts a number to a float
      *
      * @param  mixed $number
      * @return float
      */
-    public static function float($number)
+    public static function toFloat($number)
     {
         return (float) $number;
     }
 
     /**
-     * Returns an unsigned integer number
+     * Converts a number to an unsigned integer
      *
-     * @param  mixed   $number
-     * @return integer
+     * @param  mixed $number
+     * @return int
      */
-    public static function uint($number)
+    public static function toUint($number)
     {
         $number = (int) $number;
 

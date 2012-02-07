@@ -18,8 +18,7 @@
 
 namespace Scopic\Geometry;
 
-use Scopic\Foundation\Math,
-    Scopic\Geometry\Point,
+use Scopic\Geometry\Point,
     Scopic\Geometry\Size;
 
 /**
