@@ -28,7 +28,7 @@ class AutoloadTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests a valid Scopic class
      */
-    public function testValidScopicClass()
+    public function testValidClass()
     {
         $this->assertTrue(class_exists('Scopic\Foundation\Number'));
     }
@@ -36,7 +36,7 @@ class AutoloadTest extends \PHPUnit_Framework_TestCase
     /**
      * Tests an invalid Scopic class
      */
-    public function testInvalidScopicClass()
+    public function testInvalidClass()
     {
         $this->assertFalse(class_exists('Scopic\Testouille'));
     }
